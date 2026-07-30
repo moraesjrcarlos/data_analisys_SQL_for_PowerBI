@@ -16,6 +16,7 @@ O assunto central deste notebook é o uso da linguagem SQL voltada para Analytic
   - [VII. Tipos de Dados e Integridade](#vii-tipos-de-dados-e-integridade)
 - [Glossário](#glossário)
 - [Perguntas Estratégicas](#perguntas-estratégicas)
+- [Link do Notebook](#Link-do-Notebook)
 
 ---
 
@@ -178,3 +179,7 @@ Pergunta: Ao trabalhar com Subqueries, quando devo preferir o operador IN em vez
 Pergunta: Descreva o papel das Constraints (PRIMARY KEY, FOREIGN KEY, NOT NULL, CHECK, UNIQUE) na manutenção da qualidade e integridade de um banco de dados.
 Pergunta: O que caracteriza uma transação pendente e como os comandos COMMIT e ROLLBACK garantem que o banco de dados não fique em um estado inconsistente?
 Pergunta: Como os SAVEPOINTS podem ser utilizados para realizar retornos parciais em uma transação sem anular todo o trabalho feito?
+
+## Link do Notebook 
+
+https://notebooklm.google.com/notebook/8556b265-c81a-4eca-a10a-f584ccbf15c1?authuser=1 
