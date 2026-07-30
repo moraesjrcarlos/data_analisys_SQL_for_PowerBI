@@ -1,79 +1,101 @@
 # Análise de dados com SQL para Power BI
 Entrega do desafio Explore o Poder do NotebookLM para o curso Sem Parar Corpay - Back-end do Zero a Prática da DIO.
 
-O assunto central deste notebook é o uso da linguagem SQL voltada para Analytics e Business Intelligence, integrando o conhecimento técnico de banco de dados com a visão estratégica necessária para a formação de um Power BI Analyst. O matérial explorado no notebook instrui como  transformar fatos brutos em conhecimento para a tomada de decisões, utilizando o SQL como ferramenta primordial para a manipulação e análise de dados. 
+O assunto central deste notebook é o uso da linguagem SQL voltada para Analytics e Business Intelligence, integrando o conhecimento técnico de banco de dados com a visão estratégica necessária pa[...]
 
+
+## Índice
+- [Objetivo](#objetivo)
+- [Resumo do Notebook](#resumo-do-notebook)
+  - [I. Fundamentos de Business Intelligence (BI) e Análise de Dados](#i-fundamentos-de-business-intelligence-bi-e-análise-de-dados)
+  - [II. Introdução à Linguagem SQL](#ii-introdução-à-linguagem-sql)
+  - [III. Definição de Estrutura (DDL)](#iii-definição-de-estrutura-ddl)
+  - [IV. Manipulação de Dados (DML)](#iv-manipulação-de-dados-dml)
+  - [V. Controle de Transações](#v-controle-de-transações)
+  - [VI. Consulta de Dados (DQL - SELECT)](#vi-consulta-de-dados-dql---select)
+  - [VII. Tipos de Dados e Integridade](#vii-tipos-de-dados-e-integridade)
+- [Glossário](#glossário)
+- [Perguntas Estratégicas](#perguntas-estratégicas)
+
+---
 
 ## Objetivo 
 
-Adquirir domínio técnico na linguagem SQL orientada à análise de dados e compreender o ciclo de vida do dado através do processo de ETL. A meta é transformar dados brutos de fontes diversas em informações consolidadas, gerando inteligência de negócio e relatórios visuais preliminares no Power BI.
+Adquirir domínio técnico na linguagem SQL orientada à análise de dados e compreender o ciclo de vida do dado através do processo de ETL. A meta é transformar dados brutos de fontes diversas em i[...] 
+
+---
 
 ## Resumo do Notebook 
 
-Este notebook apresenta uma visão abrangente sobre os Fundamentos de Análise de Dados utilizando SQL, com foco em sua aplicação para profissionais de Power BI e Business Intelligence. O conteúdo está estruturado desde os conceitos teóricos de BI até os comandos técnicos avançados de manipulação e consulta de bancos de dados.
+Este notebook apresenta uma visão abrangente sobre os Fundamentos de Análise de Dados utilizando SQL, com foco em sua aplicação para profissionais de Power BI e Business Intelligence. O conteúdo [...]
 
-I. Fundamentos de Business Intelligence (BI) e Análise de Dados
+### I. Fundamentos de Business Intelligence (BI) e Análise de Dados
 Conceito de BI: É uma área composta por estratégias e tecnologias para análise de dados e gerenciamento de informações, visando transformar dados em conhecimento para suporte à decisão.
-Áreas de Atuação: O mercado de dados divide-se em papéis como Engenheiro de Dados (sustentação e extração), Cientista de Dados (modelagem e predição) e Analista de Dados (dashboards e diagnóstico de negócios).
+Áreas de Atuação: O mercado de dados divide-se em papéis como Engenheiro de Dados (sustentação e extração), Cientista de Dados (modelagem e predição) e Analista de Dados (dashboards e diagn�[...] 
 
 Tipos de Análise:
-Descritiva: O que aconteceu?
-Diagnóstica: Por que aconteceu?
-Preditiva: O que vai acontecer?
-Prescritiva: O que fazer?
+- Descritiva: O que aconteceu?
+- Diagnóstica: Por que aconteceu?
+- Preditiva: O que vai acontecer?
+- Prescritiva: O que fazer?
 
-II. Introdução à Linguagem SQL
+### II. Introdução à Linguagem SQL
 Origem: Desenvolvida pela IBM na década de 1970 para bancos de dados relacionais.
 
 Categorias de Comandos:
-DDL (Data Definition Language): Define a estrutura (tabelas, índices).
-DML (Data Manipulation Language): Manipula os dados (inserir, atualizar, excluir).
-DQL (Data Query Language): Recupera informações (comando SELECT).
-DCL/TCL: Controle de acesso e de transações.
+- DDL (Data Definition Language): Define a estrutura (tabelas, índices).
+- DML (Data Manipulation Language): Manipula os dados (inserir, atualizar, excluir).
+- DQL (Data Query Language): Recupera informações (comando SELECT).
+- DCL/TCL: Controle de acesso e de transações.
 
-III. Definição de Estrutura (DDL)
-CREATE TABLE: Cria novas tabelas, definindo nomes, tipos de dados e restrições. Permite implementar o autoincremento via IDENTITY ou SEQUENCE.
-ALTER TABLE: Modifica a estrutura existente, permitindo adicionar, modificar ou excluir colunas e restrições.
-DROP TABLE: Remove permanentemente a tabela e todos os seus dados. A cláusula CASCADE CONSTRAINT pode ser usada para remover restrições de chaves estrangeiras vinculadas.
-TRUNCATE: Remove todos os registros de uma tabela, mas mantém sua estrutura intacta.
+### III. Definição de Estrutura (DDL)
+- CREATE TABLE: Cria novas tabelas, definindo nomes, tipos de dados e restrições. Permite implementar o autoincremento via IDENTITY ou SEQUENCE.
+- ALTER TABLE: Modifica a estrutura existente, permitindo adicionar, modificar ou excluir colunas e restrições.
+- DROP TABLE: Remove permanentemente a tabela e todos os seus dados. A cláusula CASCADE CONSTRAINT pode ser usada para remover restrições de chaves estrangeiras vinculadas.
+- TRUNCATE: Remove todos os registros de uma tabela, mas mantém sua estrutura intacta.
 
-IV. Manipulação de Dados (DML)
-INSERT: Adiciona novos registros. O comando INSERT ALL no Oracle permite inserções múltiplas em uma ou mais tabelas simultaneamente.
-UPDATE: Modifica registros existentes com base em condições.
-DELETE: Exclui linhas de uma tabela sem apagar sua estrutura.
+### IV. Manipulação de Dados (DML)
+- INSERT: Adiciona novos registros. O comando INSERT ALL no Oracle permite inserções múltiplas em uma ou mais tabelas simultaneamente.
+- UPDATE: Modifica registros existentes com base em condições.
+- DELETE: Exclui linhas de uma tabela sem apagar sua estrutura.
+
 Aviso Crítico: Se a cláusula WHERE for omitida nos comandos UPDATE ou DELETE, todos os registros da tabela serão afetados.
 
-V. Controle de Transações
-COMMIT: Confirma e torna permanentes todas as mudanças pendentes.
-ROLLBACK: Desfaz as alterações pendentes desde o último commit.
-SAVEPOINT: Cria pontos de salvamento intermediários para retornos parciais via ROLLBACK TO.
+### V. Controle de Transações
+- COMMIT: Confirma e torna permanentes todas as mudanças pendentes.
+- ROLLBACK: Desfaz as alterações pendentes desde o último commit.
+- SAVEPOINT: Cria pontos de salvamento intermediários para retornos parciais via ROLLBACK TO.
 
-VI. Consulta de Dados (DQL - SELECT)
+### VI. Consulta de Dados (DQL - SELECT)
 Básico e Ordenação: O comando SELECT extrai dados, podendo usar DISTINCT para valores únicos e AS para apelidar colunas (aliases). 
 A cláusula ORDER BY define a ordem (ASC/DESC) e FETCH FIRST limita a quantidade de linhas.
+
 Filtragem (WHERE): Utiliza operadores de comparação (=, <>, >, etc.) e lógicos (AND, OR, NOT). Operadores como BETWEEN, IN, LIKE e IS NULL permitem buscas refinadas.
 
 Agrupamento:
-GROUP BY: Agrupa registros para aplicar funções de agregação como SUM, AVG, COUNT, MIN e MAX.
-HAVING: Filtra os resultados após o agrupamento, permitindo condições sobre funções agregadas (diferente do WHERE, que filtra antes).
+- GROUP BY: Agrupa registros para aplicar funções de agregação como SUM, AVG, COUNT, MIN e MAX.
+- HAVING: Filtra os resultados após o agrupamento, permitindo condições sobre funções agregadas (diferente do WHERE, que filtra antes).
+
 Junções (JOINs): Combinam dados de múltiplas tabelas.
-INNER JOIN: Apenas registros com correspondência em ambas as tabelas.
-LEFT/RIGHT JOIN: Todos os registros de um lado e os correspondentes do outro (preenchendo nulos onde não há match).
-FULL JOIN: Retorna todos os registros de ambas as tabelas.
+- INNER JOIN: Apenas registros com correspondência em ambas as tabelas.
+- LEFT/RIGHT JOIN: Todos os registros de um lado e os correspondentes do outro (preenchendo nulos onde não há match).
+- FULL JOIN: Retorna todos os registros de ambas as tabelas.
 
 Subqueries: Consultas aninhadas que fornecem valores para a query principal. 
 Recomenda-se o uso do operador IN quando a subquery retorna múltiplos valores para evitar erro.
 
-VII. Tipos de Dados e Integridade
+### VII. Tipos de Dados e Integridade
 Tipos Comuns: VARCHAR2 (texto variável), NUMBER (numérico), DATE (data/hora), CLOB/BLOB (grandes objetos de texto ou binários).
 Restrições (Constraints): PRIMARY KEY (identificador único), FOREIGN KEY (relacionamento), NOT NULL (obrigatoriedade), UNIQUE (unicidade) e CHECK (validação de valores).
 
+
+---
 
 ## Glossário
 
 O seguinte glossário reúne os principais conceitos técnicos e teóricos abordados nos documentos em anexo sobre Business Intelligence e Linguagem SQL.
 
-Fundamentos de Business Intelligence (BI) e Dados Business Intelligence (BI): Conjunto de estratégias e tecnologias utilizadas pelas empresas para análise de dados e gerenciamento de informações, visando transformar dados em conhecimento para suporte à decisão.
+Fundamentos de Business Intelligence (BI) e Dados Business Intelligence (BI): Conjunto de estratégias e tecnologias utilizadas pelas empresas para análise de dados e gerenciamento de informações, [...]
 
 Dados: Fatos brutos que, isoladamente, não possuem valor ou significado contextual.
 Informação: Representação de um cenário resultante do processamento de dados.
@@ -84,10 +106,10 @@ ETL (Extract, Transform, Load): Processo de extração de dados de fontes divers
 
 Tipos de Análise:
 
-Descritiva: Focada em entender o que aconteceu no passado.
-Diagnóstica: Busca as causas e efeitos de determinados comportamentos (por que aconteceu?).
-Preditiva: Utiliza modelos e probabilidades para tentar prever cenários futuros.
-Prescritiva: Sugere ações para resolver problemas ou otimizar resultados.
+- Descritiva: Focada em entender o que aconteceu no passado.
+- Diagnóstica: Busca as causas e efeitos de determinados comportamentos (por que aconteceu?).
+- Preditiva: Utiliza modelos e probabilidades para tentar prever cenários futuros.
+- Prescritiva: Sugere ações para resolver problemas ou otimizar resultados.
 
 Linguagem SQL e Categorias
 
@@ -117,6 +139,8 @@ HAVING: Cláusula de filtragem aplicada após o agrupamento do GROUP BY.
 Subquery (Subconsulta): Uma consulta aninhada dentro de outra instrução SQL para fornecer valores dinâmicos.
 COMMIT: Confirma as alterações pendentes, tornando-as permanentes no banco.
 ROLLBACK: Desfaz as alterações pendentes desde o último commit efetivado.
+
+---
 
 ## Perguntas Estratégicas 
 
