@@ -1,8 +1,7 @@
 # Análise de dados com SQL para Power BI
 Entrega do desafio Explore o Poder do NotebookLM para o curso Sem Parar Corpay - Back-end do Zero a Prática da DIO.
 
-O assunto central deste notebook é o uso da linguagem SQL voltada para Analytics e Business Intelligence, integrando o conhecimento técnico de banco de dados com a visão estratégica necessária pa[...]
-
+O assunto central deste notebook é o uso da linguagem SQL voltada para Analytics e Business Intelligence, integrando o conhecimento técnico de banco de dados com a visão estratégica necessária para a formação de um Power BI Analyst. O matérial explorado no notebook instrui como transformar fatos brutos em conhecimento para a tomada de decisões, utilizando o SQL como ferramenta primordial para a manipulação e análise de dados. 
 
 ## Índice
 - [Objetivo](#objetivo)
@@ -22,17 +21,17 @@ O assunto central deste notebook é o uso da linguagem SQL voltada para Analytic
 
 ## Objetivo 
 
-Adquirir domínio técnico na linguagem SQL orientada à análise de dados e compreender o ciclo de vida do dado através do processo de ETL. A meta é transformar dados brutos de fontes diversas em i[...] 
+Adquirir domínio técnico na linguagem SQL orientada à análise de dados e compreender o ciclo de vida do dado através do processo de ETL. A meta é transformar dados brutos de fontes diversas em informações consolidadas, gerando inteligência de negócio e relatórios visuais preliminares no Power BI.
 
 ---
 
 ## Resumo do Notebook 
 
-Este notebook apresenta uma visão abrangente sobre os Fundamentos de Análise de Dados utilizando SQL, com foco em sua aplicação para profissionais de Power BI e Business Intelligence. O conteúdo [...]
+Este notebook apresenta uma visão abrangente sobre os Fundamentos de Análise de Dados utilizando SQL, com foco em sua aplicação para profissionais de Power BI e Business Intelligence. O conteúdo está estruturado desde os conceitos teóricos de BI até os comandos técnicos avançados de manipulação e consulta de bancos de dados.
 
 ### I. Fundamentos de Business Intelligence (BI) e Análise de Dados
 Conceito de BI: É uma área composta por estratégias e tecnologias para análise de dados e gerenciamento de informações, visando transformar dados em conhecimento para suporte à decisão.
-Áreas de Atuação: O mercado de dados divide-se em papéis como Engenheiro de Dados (sustentação e extração), Cientista de Dados (modelagem e predição) e Analista de Dados (dashboards e diagn�[...] 
+Áreas de Atuação: O mercado de dados divide-se em papéis como Engenheiro de Dados (sustentação e extração), Cientista de Dados (modelagem e predição) e Analista de Dados (dashboards e diagnóstico de negócios).
 
 Tipos de Análise:
 - Descritiva: O que aconteceu?
@@ -95,12 +94,10 @@ Restrições (Constraints): PRIMARY KEY (identificador único), FOREIGN KEY (rel
 ## Glossário
 
 O seguinte glossário reúne os principais conceitos técnicos e teóricos abordados nos documentos em anexo sobre Business Intelligence e Linguagem SQL.
-
-Fundamentos de Business Intelligence (BI) e Dados Business Intelligence (BI): Conjunto de estratégias e tecnologias utilizadas pelas empresas para análise de dados e gerenciamento de informações, [...]
+Fundamentos de Business Intelligence (BI) e Dados Business Intelligence (BI): Conjunto de estratégias e tecnologias utilizadas pelas empresas para análise de dados e gerenciamento de informações, visando transformar dados em conhecimento para suporte à decisão.
 
 Dados: Fatos brutos que, isoladamente, não possuem valor ou significado contextual.
 Informação: Representação de um cenário resultante do processamento de dados.
-
 Conhecimento: Compreensão e aplicação da informação dentro de um contexto específico.
 
 ETL (Extract, Transform, Load): Processo de extração de dados de fontes diversas, sua transformação (limpeza e estruturação) e carregamento em um destino (como um Data Warehouse) para análise.
